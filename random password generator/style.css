@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: rgb(205, 245, 245);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: azure;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    width: 350px;
+}
+
+.head-text {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.input-section {
+    position: relative;
+    margin-bottom: 15px;
+}
+.copy-text{
+    position: absolute;
+    padding: 2px;
+    border-radius: 3px;
+    top: 43px;
+    right: 2px;
+    color: black;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    font-size: 13px;
+    background-color: rgb(243, 243, 243);
+    opacity: 0;
+}
+
+.input-bar {
+    height: 40px;
+    width: 100%;
+    padding: 0 35px 0 10px;
+    font-size: 14px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+}
+
+.copy-tags {
+    position: absolute;
+    height: 18px;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.btn-section {
+    text-align: center;
+}
+
+.btn {
+    padding: 10px 15px;
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #006f95;
+}
