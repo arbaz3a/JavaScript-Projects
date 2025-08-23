@@ -1,0 +1,122 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #009696;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: black;
+    margin-top: 15px;
+}
+
+.container {
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game {
+    height: 46vmin;
+    width: 60vmin;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.box {
+    border-radius: 12px;
+    border: none;
+    font-size: 60px;
+    background-color: #dabb0e;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+    height: 14vmin;
+    width: 14vmin;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.box:active {
+    transform: scale(0.95);
+}
+
+.box.clicked-x {
+    animation: fadeInBounce 0.5s ease forwards;
+    background-color: rgba(0, 22, 7, 0.2);
+}
+
+.box.clicked-o {
+    animation: drawO 0.5s ease forwards;
+    background-color: rgba(92, 2, 87, 0.2);
+}
+
+@keyframes fadeInBounce {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    60% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes drawO {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+#reset, #new {
+    color: aliceblue;
+    padding: 9px;
+    font-size: 12px;
+    background-color: rgb(22, 21, 21);
+    border: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+#reset:hover, #new:hover {
+    background-color: rgb(50, 50, 50);
+}
+
+#winner {
+    color: rgb(78, 0, 0);
+    font-size: 32px;
+    opacity: 0;
+    animation: showWinner 1s ease forwards;
+}
+
+@keyframes showWinner {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container2 {
+    height: 85px;
+    margin-top: 10px;
+}
+
+.hide {
+    display: none;
+}

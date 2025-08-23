@@ -1,0 +1,110 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    font-family: 'RocknRoll One', sans-serif;
+}
+
+body {
+    background-color: #BEECD7;
+}
+
+h2 {
+    color: white;
+    background-color: #093d25;
+    line-height: 41px;
+    height: 44px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    font-size: 2rem;
+}
+
+h2:hover {
+    transform: scale(1.1);
+}
+
+.choices {
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+    align-items: center;
+    gap: 2rem;
+}
+
+.choice {
+    height: 135px;
+    border-radius: 50%;
+    width: 153px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.choice:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+img {
+    height: 121px;
+    width: 136px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.msg {
+    margin-top: 2.4rem;
+    display: flex;
+    justify-content: center;
+}
+
+.score {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 5rem;
+    font-size: 1.4rem;
+}
+
+#user-score, #computer-score {
+    font-size: 2.5rem;
+}
+
+#msg-access {
+    padding: 0.6rem 1rem;
+    border-radius: 14px;
+    font-size: 2rem;
+    color: aliceblue;
+    background-color: rgb(15, 10, 10);
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    width: max-content;
+    text-align: center;
+}
+
+#msg-access.win {
+    background-color: green;
+    transform: scale(1.1);
+    animation: winAnimation 1s ease-in-out;
+}
+
+#msg-access.lose {
+    background-color: red;
+    transform: scale(1.1);
+    animation: loseAnimation 1s ease-in-out;
+}
+
+@keyframes winAnimation {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+@keyframes loseAnimation {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.9); }
+    100% { transform: scale(1); }
+}
